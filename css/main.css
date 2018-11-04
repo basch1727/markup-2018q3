@@ -259,36 +259,39 @@ color: black;
 justify-content: space-evenly;
 padding-top: 140px;
 }
-.lal1{ 
+.basic>div {
+margin-bottom: 20px;
+}
+.firstPack { 
 border-top: 4px solid #f9d423;
 box-shadow: 0 5px 70px rgba(40, 34, 26, 0.25);
 }
-.lal2{
+.secondPack {
 border-top: 4px solid #7f8c8d;
 box-shadow: 0 5px 70px rgba(40, 34, 26, 0.25);
 }
-.lal3 {
+.thirdPack {
 border-top: 4px solid #f85f40;
 box-shadow: 0 5px 70px rgba(40, 34, 26, 0.25);
 }
-.lal4 {
+.fourthPack {
 border-top: 4px solid #1abc9c;
 box-shadow: 0 5px 70px rgba(40, 34, 26, 0.25);
 }
-.lal1 span {
+.firstPack span {
 	color: #f9d423;
 }
-.lal2 span {
+.secondPack span {
 	color: #7f8c8d;
 }
-.lal3 span {
+.thirdPack span {
 	color: #f85f40;
 }
-.lal4 span {
+.fourthPack span {
 	color: #1abc9c;
 }
 
-.lal1, .lal2, .lal3, .lal4, .lol {
+.firstPack, .secondPack, .thirdPack, .fourthPack, .fullPack {
 padding-inline-start: 0px;
 display: grid;
 color: #b4b4b4;
@@ -396,6 +399,7 @@ color: #b4b4b4;
 
 .allTables {
 display: table;
+margin-bottom: 20px;
 }
 .allLi {
 display: table-row;
@@ -482,15 +486,19 @@ font-weight: 700;
 	width: 100%;
 	
 	display: flex;
-	justify-content: space-between;
+	
 
 }
 .forBorder {
-	margin-top: 80px;
+	
 	border-top: 1px dashed #ddd;
 	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 80px 50px 0;
 	align-items: center;
-	
+	flex-basis: 100px;
+	flex-grow: 1;
 	
 }
 .teamImg {
@@ -505,15 +513,13 @@ font-weight: 700;
 
 }
 .singleAbout {
-	border-right: 1px dashed #ddd;
-    padding: 0 100px;	
 	
-	align-content: center;
-	align-items: center;
-	width: 420px;
-    margin-top: 30px;
-    padding-top: 30px;
-    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    flex-basis: 350px;
+    flex-shrink: 1;
     
 }
 .our {
@@ -522,6 +528,14 @@ font-weight: 700;
 figure {
 	
 	
+}
+figcaption {
+	text-align: center;
+
+}
+.aboutP {
+	border-right: 1px dashed #ddd;
+	padding-right: 50px;
 }
 .ourTeam {
 display: flex;
@@ -681,8 +695,9 @@ line-height: 20px;
 
 .service{
     padding: 80px 0px;
-    display:inline-flex;
+    display: flex;
     text-align: center;
+    justify-content: space-around;
 }
 
 .singleService {
